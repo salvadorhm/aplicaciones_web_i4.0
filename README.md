@@ -5,4 +5,5 @@
 
 | No. | Nombre | Descripción |
 | --- | --- | --- |
-| 0 | apliacion_00 | Configuración de repl.it y web.py |
+| 0 | aplicacion_00 | Configuración de repl.it y web.py |
+| 1 | aplicacion_01 | Patrón de diseño MVC - controladores |
