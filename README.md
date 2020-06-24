@@ -8,3 +8,4 @@
 | 0 | aplicacion_00 | Configuración de repl.it y web.py |
 | 1 | aplicacion_01 | Patrón de diseño MVC - controladores |
 | 2 | aplicacion_02 | Manejo de cookies con web.py |
+| 3 | aplicacion_03 | Manejo de templates con web.py |
