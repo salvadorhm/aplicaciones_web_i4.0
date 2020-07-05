@@ -1,11 +1,13 @@
 import web
 
 urls = (
-    '/', 'mvc.controllers.list.List',
-    '/delete','mvc.controllers.delete.Delete',
-    '/insert','mvc.controllers.insert.Insert',
-    '/update','mvc.controllers.update.Update',
-    '/view','mvc.controllers.view.View',
+    '/', 'mvc.controllers.index.Index',
+    
+    '/personas_list', 'mvc.controllers.personas.list.List',
+    '/personas_delete','mvc.controllers.personas.delete.Delete',
+    '/personas_insert','mvc.controllers.personas.insert.Insert',
+    '/personas_update','mvc.controllers.personas.update.Update',
+    '/personas_view','mvc.controllers.personas.view.View',
 )
 app = web.application(urls, globals())
 

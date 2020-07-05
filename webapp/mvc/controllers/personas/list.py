@@ -1,6 +1,6 @@
 import web
 
-render = web.template.render("mvc/views/")
+render = web.template.render("mvc/views/personas/", base="template")
 
 class List():
 

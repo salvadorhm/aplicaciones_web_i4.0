@@ -1,12 +1,12 @@
 import web
 
-render = web.template.render("mvc/views/")
+render = web.template.render("mvc/views/", base="template")
 
-class Delete():
+class Index():
 
     def GET(self):
         try:
-            return render.delete()
+            return render.index()
         except Exception as e:
             return "Error"
             
