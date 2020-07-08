@@ -9,4 +9,12 @@ class Insert():
             return render.insert()
         except Exception as e:
             return "Error"
-   
+
+    def POST(self):
+        try:
+            form = web.input()
+            print(form)
+            print(form.nombre)
+            print(form.email)
+        except Exception as e:
+            return "Error"
