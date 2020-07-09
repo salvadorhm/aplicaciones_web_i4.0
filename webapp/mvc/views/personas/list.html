@@ -15,7 +15,7 @@ $def with(result)
       $for row in result:
         <tr>
           <td>$row['id_persona']</td>
-          <td>$row['nombre']</td>
+          <td><a href="/personas_view/$row['id_persona']">$row['nombre']</a></td>
           <td>$row['email']</td>
           <td>Delete</td>
           <td>Update</td>

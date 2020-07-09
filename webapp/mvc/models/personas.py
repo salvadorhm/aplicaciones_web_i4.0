@@ -100,7 +100,9 @@ class Personas():
             print(e)
             return False
 
+'''
 objeto = Personas()
-objeto.insert("mmm","aaa")
+objeto.delete(9)
 for row in objeto.select():
     print(row)
+'''
