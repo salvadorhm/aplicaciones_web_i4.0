@@ -58,9 +58,49 @@ class Personas():
             result = []
             return result
 
+    def insert(self, nombre, email):
+        try:
+            self.connect()
+            query = ("INSERT INTO personas (nombre,email) values(%s,%s);")
+            values = (nombre, email)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
+
+    def update(self,id_persona, nombre, email):
+        try:
+            self.connect()
+            query = ("UPDATE personas SET nombre=%s, email=%s WHERE id_persona=%s;")
+            values = (nombre, email, id_persona)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
+
+    def delete(self, id_persona):
+        try:
+            self.connect()
+            query = ("DELETE FROM personas WHERE id_persona = %s;")
+            values = (id_persona,)
+            self.cursor.execute(query, values)
+            self.cnx.commit()
+            self.cursor.close()
+            self.cnx.close()
+            return True
+        except Exception as e:
+            print(e)
+            return False
 
 objeto = Personas()
-objeto.connect()
-
-for row in objeto.view(1):
+objeto.insert("mmm","aaa")
+for row in objeto.select():
     print(row)
