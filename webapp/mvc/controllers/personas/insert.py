@@ -1,5 +1,9 @@
 import web
 
+import mvc.models.personas as personas
+
+model_personas = personas.Personas()
+
 render = web.template.render("mvc/views/personas/", base="template")
 
 class Insert():
@@ -13,8 +17,11 @@ class Insert():
     def POST(self):
         try:
             form = web.input()
-            print(form)
-            print(form.nombre)
-            print(form.email)
+            nombre = form.nombre
+            email = form.email
+            model_personas.insert(nombre, email)
+            web.seeother('/personas_list')
         except Exception as e:
-            return "Error"
+            print(e)
+            return render.insert()
+            
