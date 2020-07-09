@@ -8,5 +8,6 @@ class List():
         try:
             return render.list()
         except Exception as e:
+            print(e)
             return "Error"
    
