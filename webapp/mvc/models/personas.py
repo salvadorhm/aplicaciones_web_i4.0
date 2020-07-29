@@ -8,7 +8,7 @@ class Personas():
                 user='user_agenda', 
                 password='Agenda.2020',
                 host='127.0.0.1',
-                port=3309,
+                port=3306,
                 database='agenda_db'
                 )
             self.cursor = self.cnx.cursor()

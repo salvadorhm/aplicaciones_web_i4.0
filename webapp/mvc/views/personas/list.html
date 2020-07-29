@@ -17,8 +17,8 @@ $def with(result)
           <td>$row['id_persona']</td>
           <td><a href="/personas_view/$row['id_persona']">$row['nombre']</a></td>
           <td>$row['email']</td>
-          <td>Delete</td>
-          <td>Update</td>
+          <td><a href="/personas_delete/$row['id_persona']">Delete</a></td>
+          <td><a href="/personas_update/$row['id_persona']">Update</a></td>
         </tr>
     </tbody>
   </table>
